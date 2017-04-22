@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	uint8_t ui8LED = 2; // En binario es 00000..010, es decir, BIT1 a 1
+	uint8_t ui8LED = 14; // En binario es 00000..010, es decir, BIT1 a 1
 	// Configura reloj del sistema a 50MHz (PLL a 200MHz/4=50MHz)
 	SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
 	// Habilita Puerto F (LEDs)
@@ -23,8 +23,8 @@ int main(void)
 		// solo se modificaran los bits indicados por la mascara)
 		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, ui8LED);
 		// Retardo para ver encendido el LED; parametro= "loops" (3 ciclos por "loop")
-		SysCtlDelay(16666666); //  1 seg (aprox)
+		//SysCtlDelay(16666666); //  1 seg (aprox)
 		// Enciende el siguiente LED (el del bit que esta a continuacion)
-		if (ui8LED == 8) {ui8LED = 2;} else {ui8LED = ui8LED*2;}
+		//if (ui8LED == 8) {ui8LED = 2;} else {ui8LED = ui8LED*2;}
 	}
 }
