@@ -1,0 +1,1 @@
+"./Tutorial1Mod.obj" "./tm4c123gh6pm_startup_ccs.obj" "./driverlib/cpu.obj" "./driverlib/gpio.obj" "./driverlib/interrupt.obj" "./driverlib/sysctl.obj" "../tm4c123gh6pm.cmd" -llibc.a 
